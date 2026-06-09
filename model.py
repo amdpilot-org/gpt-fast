@@ -70,6 +70,8 @@ class ModelArgs:
         return cls(**transformer_configs[config[0]])
 
 
+# STAGE0 BLOCKER: Qwen3 model configurations are not yet present.
+# Missing entries for Qwen3-32B and Qwen3-0.6B needed for issue #4.
 transformer_configs = {
     "CodeLlama-7b-Python-hf": dict(block_size=16384, vocab_size=32000, n_layer=32, dim = 4096, rope_base=1000000),
     "7B": dict(n_layer=32, n_head=32, dim=4096),
